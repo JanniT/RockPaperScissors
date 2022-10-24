@@ -1,21 +1,8 @@
-## Rock Paper Scissors -Game##
+## Rock Paper Scissors -Game ##
 
 import random
-from turtle import clear
-
-def game():
-    print("""Please choose a letter:
-    'R' = Rock,
-    'P' = Paper,
-    'S' = Scissors\n""")
-
-    choise = input("Choose your symbol: ")
-    return choise
-
-def menu(): 
-    print("Do you want to play again? [Y] / [N]")
-    menuChoise = input("[Y] / [N]: ")
-    return menuChoise
+import Menu
+import Game_choise
 
 def main():
     print("\n\nRock, Paper, Scissors --- SHOOT!\n\n")
@@ -23,7 +10,7 @@ def main():
     while(1<2):
         choicesList = ['R', 'P', 'S']
 
-        userChoise = game()
+        userChoise = Game_choise.game()
         computerChoise = random.choices(choicesList)
 
         if (userChoise == "R" or userChoise == "P" or userChoise == "S"):
@@ -59,7 +46,7 @@ def main():
             break
 
     while(1<2):
-        menuChoise = menu()
+        menuChoise = Menu.menu()
         if (menuChoise == 'Y'):
             main()
         if(menuChoise == 'N'):
