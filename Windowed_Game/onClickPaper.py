@@ -1,7 +1,7 @@
 from tkinter import *
 from tkinter import ttk
 from PIL import ImageTk, Image
-import random, computer_Choise
+import computer_Choise
 
 def onClickPaper(): 
     root = Tk()
@@ -9,12 +9,12 @@ def onClickPaper():
     root.rowconfigure(1, weight=10)
 
     # Creating the grid size
-    root.geometry("400x250")
+    root.geometry("350x250")
     root.title("Paper")
 
     # Back button
-    quit_Button = ttk.Button(root,text="Back", command=root.destroy)
-    quit_Button.grid(column=1, row=3, padx=5, pady=5)
+    back_Button = ttk.Button(root,text="Back", command=root.destroy)
+    back_Button.grid(column=1, row=3, padx=10, pady=10)
 
     choise_text = ttk.Label(root, text="You chose Paper!", font=('Helvetica 20 bold'))
     choise_text.grid(column=0, row=0)
@@ -45,5 +45,5 @@ def onClickPaper():
         win_text = ttk.Label(root, text="You win!", font=('Helvetica 15 bold'))
         win_text.grid(column=0, row=2)
 
-    root.after(10000, lambda:root.destroy())
+    root.after(3000, lambda:root.destroy())
     return

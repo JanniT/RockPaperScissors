@@ -2,24 +2,24 @@
 from tkinter import *
 from tkinter import ttk
 from PIL import ImageTk, Image
-import random
 import onClickRock, onClickPaper, onClickScissors
 
 def gameWindow():
     root = Tk()
-    
     root.columnconfigure(0, weight=3)
     root.rowconfigure(1, weight=2)
 
     # Creating the grid size
     root.geometry("1300x800")
+    root.maxsize(1300, 600)
+    root.minsize(1300, 600)
     root.title("Rock Paper Scissors")
 
     title_label = ttk.Label(root, text="Please choose: \nRock, Paper, Scissors", font=('Helvetica 30 bold'))
     title_label.grid(column=0, row=0)
 
     # Quit button
-    quit_Button = ttk.Button(root,text="Quit", command=root.destroy)
+    quit_Button = ttk.Button(root,text="Quit",command=root.destroy)
     quit_Button.grid(column=3, row=3, padx=5, pady=5)
 
     # Rock button
@@ -39,8 +39,6 @@ def gameWindow():
 
     root.mainloop()
     return  
-
-
 
 gameWindow()
 
