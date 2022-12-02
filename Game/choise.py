@@ -1,5 +1,4 @@
 ## Asking the user their choise of symbol ##
-
 def game():
     print("""Please choose a letter:
     'R' = Rock,

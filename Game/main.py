@@ -2,7 +2,7 @@
 
 import random
 import Menu
-import Game_choise
+import choise
 
 def main():
     print("\n\nRock, Paper, Scissors --- SHOOT!\n\n")
@@ -10,7 +10,7 @@ def main():
     while(1<2):
         choicesList = ['R', 'P', 'S']
 
-        userChoise = Game_choise.game()
+        userChoise = choise.game()
         computerChoise = random.choices(choicesList)
 
         if (userChoise == "R" or userChoise == "P" or userChoise == "S"):
@@ -47,9 +47,9 @@ def main():
 
     while(1<2):
         menuChoise = Menu.menu()
-        if (menuChoise == 'Y'):
+        if (menuChoise == 'Y') or (menuChoise == 'y'):
             main()
-        if(menuChoise == 'N'):
+        if(menuChoise == 'N') or (menuChoise == 'n'):
             print("Thank you for playing!")
             return
         else: 
