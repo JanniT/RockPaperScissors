@@ -46,7 +46,7 @@ def main():
             break
 
     while(1<2):
-        menuChoise = Menu.menu()
+        menuChoise = menu.menu()
         if (menuChoise == 'Y') or (menuChoise == 'y'):
             main()
         if(menuChoise == 'N') or (menuChoise == 'n'):
