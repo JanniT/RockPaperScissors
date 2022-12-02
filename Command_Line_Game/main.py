@@ -1,5 +1,4 @@
 ## Rock Paper Scissors -Game ##
-
 import random
 import menu
 import choise
@@ -14,14 +13,14 @@ def main():
         computerChoise = random.choices(choicesList)
 
         if (userChoise == "R" or userChoise == "P" or userChoise == "S"):
-            print(f"  You chose '{userChoise}'")
+            print(f"You chose '{userChoise}'")
             break
 
         else:
             print("\nTry again!\n")
 
     computerChoiseNew= (','.join(computerChoise))
-    print(f"\nOpponent chose: {computerChoiseNew}\n")
+    print(f"\nOpponent chose: '{computerChoiseNew}'\n")
 
     while(1<2): 
 
@@ -30,15 +29,15 @@ def main():
             break
         
         elif (computerChoiseNew == 'R' and userChoise == 'S'): 
-            print("Scissors beats rock, computer wins!\n")
+            print("Rock beats Scissors, computer wins!\n")
             break
 
         elif (computerChoiseNew == 'P' and userChoise == 'R'):
-            print("Scissors beats rock, computer wins!\n")
+            print("Paper beats Rock, computer wins!\n")
             break
 
         elif (computerChoiseNew == 'S' and userChoise == 'P'):
-            print("Scissors beats rock, computer wins!\n")
+            print("Scissors beats Paper, computer wins!\n")
             break
 
         else: 
@@ -49,7 +48,7 @@ def main():
         menuChoise = menu.menu()
         if (menuChoise == 'Y') or (menuChoise == 'y'):
             main()
-        if(menuChoise == 'N') or (menuChoise == 'n'):
+        elif(menuChoise == 'N') or (menuChoise == 'n'):
             print("Thank you for playing!")
             return
         else: 
