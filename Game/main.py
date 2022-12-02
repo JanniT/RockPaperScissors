@@ -1,7 +1,7 @@
 ## Rock Paper Scissors -Game ##
 
 import random
-import Menu
+import menu
 import choise
 
 def main():
